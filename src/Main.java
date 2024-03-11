@@ -1,8 +1,11 @@
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
 
             //ESERCIZIO 0
@@ -17,6 +20,9 @@ public class Main {
 //        debugger testato correttamente
 
 //        ESERCIZIO 1
+
+
+
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
@@ -47,10 +53,16 @@ public class Main {
                 numbers[position - 1] = newValue;
 
                 System.out.println(Arrays.toString(numbers));
+//            } catch (IndexOutOfBoundsException e) {
+//                System.out.println(e.getMessage());
+//            } catch (Exception e) {
+//                System.out.println("Errore durante l'input: " + e.getMessage());
+//                scanner.next(); // Consuma l'input non valido per evitare un loop infinito
+//            }
             } catch (IndexOutOfBoundsException e) {
-                System.out.println(e.getMessage());
+                logger.error(e.getMessage());
             } catch (Exception e) {
-                System.out.println("Errore durante l'input: " + e.getMessage());
+                logger.error("Errore durante l'input: {}", e.getMessage());
                 scanner.next(); // Consuma l'input non valido per evitare un loop infinito
             }
         }
