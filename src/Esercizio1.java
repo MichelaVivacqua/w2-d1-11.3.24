@@ -4,8 +4,8 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Main {
-    private static Logger logger = LoggerFactory.getLogger(Main.class);
+public class Esercizio1 {
+    private static Logger logger = LoggerFactory.getLogger(Esercizio1.class);
     public static void main(String[] args) {
 
             //ESERCIZIO 0
